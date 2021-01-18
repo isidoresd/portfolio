@@ -383,7 +383,7 @@ h6 .small, h6 small {
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
-    margin-top: 60px;
+    margin-top: 25px;
     margin-bottom: 9.5px
 }
 
@@ -5074,7 +5074,7 @@ p {
 
 @media (min-width:992px) {
     .h2, h2 {
-        padding: 0 30px
+        padding: 30px
     }
 }
 
