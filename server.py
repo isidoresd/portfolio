@@ -3,6 +3,7 @@ import csv
 app = Flask(__name__)
 print(__name__)
 
+app = Flask(__name__, template_folder='./templates')
 
 @app.route('/')
 def home():
@@ -38,3 +39,7 @@ def submit_form():
             return 'Error, did not save.'
     else:
         return 'Error submitting.'
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -274,7 +274,7 @@ body {
     font-family: JetBrains Mono, monospace, Helvetica, Arial, sans-serif;
     font-size: 11px;
     line-height: 1.78;
-    color: #000;
+    color: #00;
     background-color: #fff
 }
 
@@ -338,8 +338,8 @@ img {
 hr {
     margin-top: 19px;
     margin-bottom: 19px;
-    border: 0;
-    border-top: 1px solid #eee
+    border: hidden 0;
+    border-top: 0px hidden #ffffff
 }
 
 .sr-only {
@@ -382,9 +382,14 @@ h6 .small, h6 small {
     color: #777
 }
 
-.h1, .h2, .h3, h1, h2, h3 {
+.h1, .h2, h1, h2 {
     margin-top: 25px;
     margin-bottom: 9.5px
+}
+
+.h3, h3 {
+  margin-top: 25px;
+  margin-bottom: 9.5px
 }
 
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small,
@@ -392,9 +397,14 @@ h1 small, h2 .small, h2 small, h3 .small, h3 small {
     font-size: 65%
 }
 
-.h4, .h5, .h6, h4, h5, h6 {
-    margin-top: 9.5px;
-    margin-bottom: 9.5px
+.h4, .h5, h4, h5 {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.h6, h6 {
+  margin-top: 9px;
+  margin-bottom: 8px
 }
 
 .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small,
@@ -420,7 +430,7 @@ h4 small, h5 .small, h5 small, h6 .small, h6 small {
 }
 
 .h6, h6 {
-    font-size: 10px
+    font-size: 8px
 }
 
 p {
