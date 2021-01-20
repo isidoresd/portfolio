@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -106,7 +106,7 @@ pre {
 }
 
 code, kbd, pre, samp {
-    font-family: JetBrains Mono, JetBrains Mono;
+    font-family: Roboto Mono, Roboto Mono;
     font-size: 1em
 }
 
@@ -271,7 +271,7 @@ html {
 }
 
 body {
-    font-family: JetBrains Mono, monospace, Helvetica, Arial, sans-serif;
+    font-family: Roboto Mono, monospace, Helvetica, Arial, sans-serif;
     font-size: 11px;
     line-height: 1.78;
     color: #00;
@@ -367,7 +367,7 @@ hr {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: JetBrains Mono, monospace, Helvetica, Arial, sans-serif;
+    font-family: Roboto Mono, monospace, Helvetica, Arial, sans-serif;
     font-weight: 700;
     line-height: 1.1;
     color: #000
@@ -3699,6 +3699,7 @@ tbody.collapse.in {
 .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
+    letter-spacing: .8px;
     line-height: 19px
 }
 
@@ -4947,8 +4948,8 @@ body.minimal {
 }
 
 .hero-full-container h1 {
-    font-family: JetBrains Mono, monospace, Helvetica, Arial, sans-serif;
-    font-weight: 900
+    font-family: Roboto Mono, monospace, Helvetica, Arial, sans-serif;
+    font-weight: 700
 }
 
 .hero-full-container .hero-full-wrapper {
@@ -5053,7 +5054,7 @@ body.minimal {
 
 body, p {
     font-weight: 300;
-    letter-spacing: .8px;
+    letter-spacing: .6px;
     line-height: 25px
 }
 
@@ -5069,7 +5070,7 @@ p {
 .h2:after, .h2:before, h2:after, h2:before {
     content: "";
     position: absolute;
-    height: 100%;
+    height: 40%;
     background-color: #000;
     width: 1px
 }
@@ -5099,7 +5100,7 @@ p {
 }
 
 blockquote {
-    font-family: JetBrains Mono, monospace, Helvetica, Arial, sans-serif;
+    font-family: Roboto Mono, monospace, Helvetica, Arial, sans-serif;
     border: none;
     padding-left: 0;
     padding-right: 0;
