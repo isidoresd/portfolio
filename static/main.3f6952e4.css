@@ -222,7 +222,8 @@ td, th {
     }
 
     img {
-        max-width: 100% !important
+        max-width: 450px !important
+        max-height: 450px !important
     }
 
     h2, h3, p {
