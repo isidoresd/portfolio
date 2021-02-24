@@ -5405,4 +5405,37 @@ textarea {
     margin-right: 5px
 }
 
+.blog-menu {
+    display: none;
+}
+
+.navbar-collapse:hover .blog-menu {
+    display: block;
+    position: absolute;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.navbar-collapse:hover .blog-menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.navbar-collapse:hover .blog-menu ul li{
+    width: 150;
+    padding: 5px;
+    border-bottom: 1px dotted #ffffff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.navbar-collapse:hover .blog-menu ul li:last-child{
+    border-bottom: none;
+}
+
+.navbar-collapse:hover .blog-menu ul li a:hover{
+    color: #ffff;
+}
 /*# sourceMappingURL=main.70a66962.map*/
