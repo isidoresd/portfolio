@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@300&display=swap');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -85,7 +85,7 @@ sub {
 }
 
 img {
-    border: 0
+    border: 5px;
 }
 
 svg:not(:root) {
@@ -273,7 +273,7 @@ html {
 
 body {
     font-family: Roboto Mono, monospace, Helvetica, Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.78;
     color: #00;
     background-color: #fff
@@ -5054,6 +5054,7 @@ body.minimal {
 }
 
 body, p {
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     letter-spacing: .6px;
     line-height: 25px

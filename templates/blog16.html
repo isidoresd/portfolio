@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
   <link href=".static/assets/favicon.ico" rel="icon">
 
-  <title>Solidworks</title>
+  <title>Solidworks Progress</title>
 
   <link href="./static/main.3f6952e4.css" rel="stylesheet">
 </head>
@@ -46,7 +46,6 @@
 
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./blog5.html" title="Exercise">05</a></li>
             <li><a href="./blog6.html" title="Meeting">06</a></li>
             <li><a href="./blog7.html" title="Pressure Ulcers">07</a></li>
             <li><a href="./blog8.html" title="Market Research">08</a></li>
@@ -54,8 +53,10 @@
             <li><a href="./blog10.html" title="The Treehouse">10</a></li>
             <li><a href="./blog11.html" title="PDS">11</a></li>
             <li><a href="./blog12.html" title="Anthropometry">12</a></li>
-            <li><a href="./blog13.html" title="Solidworks" class="active">13</a></li>
+            <li><a href="./blog13.html" title="Solidworks">13</a></li>
             <li><a href="./blog14.html" title="WheelchairDriver">14</a></li>
+            <li><a href="./blog15.html" title="Solidworks Progress">15</a></li>
+            <li><a href="./blog16.html" title="Pressure Sensing" class="active">16</a></li>
           </ul>
         </div>
       </div>
@@ -68,34 +69,77 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="section-container-spacer text-center">
-            <h1 class="h2">13 Solidworks</h1>
+            <h1 class="h2">16 Pressure Sensing Introduction</h1>
           </div>
-          <h5 style="text-align:center;">17/03/21</h5>
+          <h5 style="text-align:center;">30/03/21</h5>
           <p>
-            The majority of modelling for this project will be carried out using
-            <a href="https://www.solidworks.com/" target="_blank">Solidworks</a>,
-            CAD software. Although I have previously used this software before but have not done
-            so in quite a while. Therefore it has been slow getting back into its
-            functioning. I've shown the results of some basic experimentation with
-            early design ideas for singular parts below. The images below depict
-            Force Element Analysis (FEA) with the forces applied being predicted
-            from the individual anthropometric profile.
+            This post will develop some of my ideas for pressure ulcer risk reduction,
+            namely automatic pressure sensing and chair actuation. If the chair
+            detects prolonged pressure then it can take the neccessary steps to relieve
+            that pressure.
+            <br>
+            Firstly, I will examine the pressure sensing capabilities. I will use
+            Tinkercad.com which has a simulated Arduino Uno, a popular microcontroller.
           </p>
         </div>
 
         <div class="col-md-8 col-md-offset-2 section-container-spacer">
           <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <img src="./static/assets/images/blog13_joint.jpg" class="img-responsive" alt="">
-            </div>
-            <div class="col-xs-12 col-md-6">
-              <img src="./static/assets/images/blog13_spine.jpg" class="img-responsive" alt="">
+            <div class="col-xs-12">
+              <img src="./static/assets/images/blog16_arduino.png" class="img-responsive" alt="">
             </div>
           </div>
         </div>
+        <hr>
+        <div class="col-xs-12">
+          <figure style="float: right; margin-left: 20px;">
+            <pre>
+              <code>
+                int Piezo = 9;
+                int ForceSensor = A1;
+                int ForceValue = 0;
+                int Threshold = 740;
+
+                void setup(){
+                  pinMode(ForceSensor, INPUT);
+                  pinMode(piezo, OUTPUT);
+                  Serial.begin(9600);
+                }
+
+                void loop(){
+                  ForceValue = analogRead(ForceSensor);
+                  Serial.println(ForceValue);
+                  if (ForceValue > Threshold){
+                    tone(Piezo, ForceValue);
+                  } else {
+                    noTone(Piezo);
+                  }
+                }
+              </code>
+            </pre>
+          </figure>
+          <p>
+            The circuit depicted consists of a piezo buzzer and force sensor connected
+            to an Arduino. The idea is for the force applied to exceed a predetermined
+            amount, in this instance 0.5 N, which then actuates the piezo. The piezo
+            is used here as a standin for possibly a stepper-motor or hydaulic piston
+            that tilts the chair.
+          </p>
+          <p>
+            The code to the right is written in Arduino/C++. I had run two other
+            experiments with no success as of yet. These were an averaging of applied
+            force over a period of time to then actuate the chair if average pressure
+            exceeds a threshold and actuating a piezo for just a specific time period
+            to represent the chair tilting a small degree each incidence of detrimental
+            pressure. My knowledge of programming is somewhat limited currently.
+            I wish to develop these ideas further later.
+          </p>
+        </div>
+
       </div>
     </div>
-  
+  </div>
+
 
 
   <footer class="footer-container text-center">
