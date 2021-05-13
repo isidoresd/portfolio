@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
   <link href=".static/assets/favicon.ico" rel="icon">
 
-  <title>Solidworks Progress</title>
+  <title>Code Development</title>
 
   <link href="./static/main.3f6952e4.css" rel="stylesheet">
 </head>
@@ -46,8 +46,6 @@
 
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./blog6.html" title="Meeting">06</a></li>
-            <li><a href="./blog7.html" title="Pressure Ulcers">07</a></li>
             <li><a href="./blog8.html" title="Market Research">08</a></li>
             <li><a href="./blog9.html" title="Existing Problems">09</a></li>
             <li><a href="./blog10.html" title="The Treehouse">10</a></li>
@@ -58,6 +56,7 @@
             <li><a href="./blog15.html" title="Solidworks Progress">15</a></li>
             <li><a href="./blog16.html" title="Pressure Sensing">16</a></li>
             <li><a href="./blog17.html" title="Code Development" class="active">17</a></li>
+            <li><a href="./blog18.html" title="Video">18</a></li>
           </ul>
           </ul>
         </div>
@@ -71,7 +70,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="section-container-spacer text-center">
-            <h1 class="h2">16 Pressure Sensing Introduction</h1>
+            <h1 class="h2">17 Code Development</h1>
           </div>
           <h5 style="text-align:center;">06/04/21</h5>
           <p>
@@ -122,8 +121,8 @@
                 void setup(){
 
                   pinMode(forceSensor, INPUT);  // force sensor input pin type
-                  myservo.attach(9);      // initialise servo pin
-                  myservo.write(0);         // servo initial position
+                  myservo.attach(9);            // initialise servo pin
+                  myservo.write(0);             // servo initial position
                   Serial.begin(9600);
                 }
 
